@@ -1,0 +1,250 @@
+<!--
+Name: David Leke-Atere
+Course: Web Development II
+Teacher: Scott Hardman
+School: Pembina Trails Collegiate
+Assignment: Treaty 10 Project Website
+Date Last Modified: March 16, 2026
+Description: Homepage explaining the history, lands, leaders, and resources related to Treaty 10.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Treaty 10 Project</title>
+
+    <link rel="stylesheet" href="Stylesheets/styles.css" />
+
+    <style>
+      /* Navigation */
+
+      .centered-nav {
+        text-align: center;
+      }
+
+      .centered-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .centered-nav li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .centered-nav li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* Footer */
+
+      .footer {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 30px;
+      }
+
+      /* Page specific styling */
+
+      #about,
+      #territories,
+      #figures {
+        background-color: whitesmoke;
+        width: 40%;
+        padding: 25px;
+        margin-left: 40px;
+        display: inline-block;
+      }
+
+      #territories,
+      #figures {
+        margin: 15px 0 0 40px;
+        padding: 10px 25px;
+      }
+
+      #resources {
+        clear: left;
+        background-color: whitesmoke;
+        margin: 40px 0 0 40px;
+        padding: 25px;
+      }
+
+      /* Span styling */
+
+      .highlight {
+        font-weight: bold;
+        color: #3b6e47;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Treaty 10 Project</h1>
+
+      <nav class="centered-nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Page 1</a></li>
+          <li><a href="">Page 2</a></li>
+          <li><a href="">Page 3</a></li>
+          <li><a href="">Page 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+
+      <section id="hero">
+        <h2 style="display: grid; place-items: center">
+          Welcome to the Treaty 10 Project
+        </h2>
+
+        <div>
+          <p>
+            Exploring the history, lands, and communities involved in
+            <span class="highlight">Treaty 10</span>.
+          </p>
+
+          <img
+            src="images/Treaty Map.gif"
+            alt="Map representing Treaty 10 territory"
+            width="600"
+            height="600" />
+        </div>
+      </section>
+
+      <!-- About Section -->
+
+      <section id="about">
+        <h2>About Treaty 10</h2>
+
+        <p>
+          Treaty 10 was signed between
+          <span class="highlight">1906 and 1907</span>
+          between the Canadian government and First Nations.
+        </p>
+
+        <ul>
+          <li>
+            Signing Period: Treaty 10 was negotiated and signed between 1906 and
+            1907 involving the Cree and Chipewyan First Nations in northern
+            Saskatchewan and parts of Alberta.
+          </li>
+
+          <li>
+            Treaty 10 was one of the last treaties signed in Saskatchewan and
+            addressed Indigenous land rights.
+          </li>
+
+          <li>
+            The treaty was signed while the Canadian government was expanding
+            control over western territories.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Territories Section -->
+
+      <section id="territories">
+        <h2>The Land & Communities</h2>
+
+        <img
+          src="Images/TReaty 10 symbol.webp"
+          alt="Symbol representing Treaty 10 lands" />
+
+        <p>
+          The communities involved in Treaty 10 primarily include the Cree and
+          Chipewyan First Nations. These groups lived on the land covered by the
+          treaty. The treaty included provisions for reserves, annuities,
+          education, and the rights to hunt, fish, and trap.
+        </p>
+      </section>
+
+      <!-- Leaders Section -->
+      <section id="figures">
+        <h2>Voices & Leaders</h2>
+
+        <article>
+          <h3>Chief William Apisis</h3>
+
+          <p>
+            Chief William Apisis was one of the Indigenous leaders involved in
+            the Treaty 10 negotiations. He represented his community and worked
+            to make sure their concerns about land, hunting, and their
+            traditional way of life were heard during discussions with the
+            Canadian government.
+          </p>
+        </article>
+
+        <article>
+          <h3>Commissioner J.A.J. McKenna</h3>
+
+          <p>
+            James Andrew Joseph McKenna was the Canadian government commissioner
+            responsible for negotiating Treaty 10. His role was to travel to
+            northern communities and explain the treaty terms to First Nations
+            leaders before the agreement was signed in 1906 and 1907.
+          </p>
+        </article>
+
+        <article>
+          <h3>Cree and Chipewyan Leaders</h3>
+
+          <p>
+            Many Cree and Chipewyan leaders participated in the treaty
+            discussions. These leaders spoke on behalf of their communities and
+            wanted to ensure their people could continue to hunt, fish, and live
+            on their traditional lands while also adapting to the changing
+            political and economic conditions of the time.
+          </p>
+        </article>
+      </section>
+
+      <!-- Resources Section -->
+
+      <section id="resources">
+        <h2>Learn More</h2>
+
+        <ul>
+          <li>The Canadian Encyclopedia</li>
+          <li>The Government of Canada</li>
+          <li>Canadian History Workshop</li>
+          <li>Treaty 10 documents</li>
+        </ul>
+
+        <p>
+          Learn more here:
+
+          <a
+            href="https://www.thecanadianencyclopedia.ca/en/article/treaty-10"
+            target="_blank">
+            Treaty 10 – The Canadian Encyclopedia
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 David Leke-Atere. All rights reserved.</p>
+
+      <p><strong>Sources:</strong></p>
+
+      <p>
+        The Canadian Encyclopedia<br />
+        Government of Canada<br />
+        Canadian History Workshop<br />
+        Treaty 10
+      </p>
+    </footer>
+  </body>
+</html>
