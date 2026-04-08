@@ -1,38 +1,40 @@
+<!--
+Name: David Leke-Atere
+Course: Web Development II
+Teacher: Scott Hardman
+School: Pembina Trails Collegiate
+-->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treaty 10 Project</title>
     <style>
-      /* General Body */
       body {
-        background-color: #fff5e1; /* beige background */
-        color: #3a2e2a; /* dark text */
+        background-color: #fff5e1;
+        color: #3a2e2a;
         font-family: Arial, sans-serif;
         margin: 0;
         line-height: 1.6;
       }
 
-      /* Header */
       header {
-        background-color: #3b6e47; /* dark green */
-        color: #fff5e1;
+        background-color: #3b6e47;
         text-align: center;
         padding: 20px;
       }
 
       header h1 {
-        background-color: #3b6e47; /* match header */
+        background-color: #3b6e47;
         color: #fff5e1;
-        display: inline-block; /* allows curved pill */
+        display: inline-block;
         padding: 15px 30px;
-        border-radius: 25px; /* pill-shaped */
+        border-radius: 25px;
         margin: 0 auto;
         text-align: center;
       }
 
-      /* Navigation */
       .centered-nav {
         text-align: center;
       }
@@ -61,18 +63,16 @@
         background-color: #e0e0e0;
       }
 
-      /* Hero Section */
       #hero div {
         background-color: whitesmoke;
         margin-left: 40px;
         padding: 25px;
         display: inline-block;
         float: left;
-        border-radius: 15px; /* rounded corners */
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow */
+        border-radius: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
 
-      /* Sections */
       #about,
       #territories {
         background-color: whitesmoke;
@@ -90,19 +90,17 @@
         padding: 10px 25px;
       }
 
-      /* Voices & Leaders Section */
       #figures {
         background-color: whitesmoke;
-        width: calc(100% - 80px); /* full width minus margins */
+        width: calc(100% - 80px);
         padding: 25px;
-        margin: 40px auto 0 auto; /* centered horizontally */
+        margin: 40px auto 0 auto;
         box-sizing: border-box;
         border-radius: 15px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         overflow-wrap: break-word;
       }
 
-      /* Learn More Section */
       #resources {
         background-color: whitesmoke;
         margin: 30px 40px;
@@ -123,13 +121,11 @@
         margin: 0 15px;
       }
 
-      /* Highlights */
       .highlight {
         font-weight: bold;
         color: #3b6e47;
       }
 
-      /* Links */
       a {
         color: #40c0c0;
         text-decoration: none;
@@ -139,7 +135,6 @@
         text-decoration: underline;
       }
 
-      /* Footer */
       footer {
         background-color: #e07b39;
         color: #fff5e1;
@@ -152,7 +147,6 @@
   <body>
     <header>
       <h1>Treaty 10 Project</h1>
-
       <nav class="centered-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -165,18 +159,13 @@
     </header>
 
     <main>
-      <!-- Hero Section -->
       <section id="hero">
-        <h2 style="display: grid; place-items: center">
-          Welcome to the Treaty 10 Project
-        </h2>
-
+        <h2>Welcome to the Treaty 10 Project</h2>
         <div>
           <p>
             Exploring the history, lands, and communities involved in
             <span class="highlight">Treaty 10</span>.
           </p>
-
           <img
             src="images/Treaty Map.gif"
             alt="Map representing Treaty 10 territory"
@@ -185,7 +174,6 @@
         </div>
       </section>
 
-      <!-- About Section -->
       <section id="about">
         <h2>About Treaty 10</h2>
         <p>
@@ -193,19 +181,16 @@
           <span class="highlight">1906 and 1907</span>
           between the Canadian government and First Nations.
         </p>
-
         <ul>
           <li>
             Signing Period: Treaty 10 was negotiated and signed between 1906 and
             1907 involving the Cree and Chipewyan First Nations in northern
             Saskatchewan and parts of Alberta.
           </li>
-
           <li>
             Treaty 10 was one of the last treaties signed in Saskatchewan and
             addressed Indigenous land rights.
           </li>
-
           <li>
             The treaty was signed while the Canadian government was expanding
             control over western territories.
@@ -213,14 +198,11 @@
         </ul>
       </section>
 
-      <!-- Territories Section -->
       <section id="territories">
         <h2>The Land & Communities</h2>
-
         <img
-          src="Images/TReaty 10 symbol.webp"
+          src="images/Treaty 10 symbol.webp"
           alt="Symbol representing Treaty 10 lands" />
-
         <p>
           The communities involved in Treaty 10 primarily include the Cree and
           Chipewyan First Nations. These groups lived on the land covered by the
@@ -229,7 +211,6 @@
         </p>
       </section>
 
-      <!-- Voices & Leaders Section -->
       <section id="figures">
         <h2>Voices & Leaders</h2>
 
@@ -266,34 +247,29 @@
         </article>
       </section>
 
-      <!-- Learn More Section -->
       <section id="resources">
         <h2>Learn More</h2>
-
         <ul>
           <li>The Canadian Encyclopedia</li>
           <li>The Government of Canada</li>
           <li>Canadian History Workshop</li>
           <li>Treaty 10 documents</li>
         </ul>
-
         <p>
           Learn more here:
           <a
             href="https://www.thecanadianencyclopedia.ca/en/article/treaty-10"
             target="_blank"
-            rel="noopener noreferrer">
-            Treaty 10 – The Canadian Encyclopedia
-          </a>
+            rel="noopener noreferrer"
+            >Treaty 10 – The Canadian Encyclopedia</a
+          >
         </p>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 David Leke-Atere. All rights reserved.</p>
-
       <p><strong>Sources:</strong></p>
-
       <p>
         The Canadian Encyclopedia<br />
         Government of Canada<br />
