@@ -12,14 +12,6 @@ header {
   padding: 20px;
 }
 
-#hero div {
-  background-color: whitesmoke;
-  margin-left: 40px;
-  padding: 25px;
-  display: inline-block;
-  float: left;
-}
-
 footer {
   background-color: #e07b39;
   color: #fff5e1;
