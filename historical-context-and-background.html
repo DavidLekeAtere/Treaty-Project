@@ -1,42 +1,336 @@
+<!--
+  Name: David Leke-Atere
+  Course: Web Development II
+  Teacher: Scott Hardman
+  School: Pembina Trails Collegiate
+  Date Last Modified: 2026-04-10
+-->
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Treaty 10 Project</title>
 
     <link rel="stylesheet" href="Stylesheets/styles.css" />
 
     <style>
-      /* Page specific styling */
+      /* ---------- PAGE STYLING ---------- */
+      /* This styling creates a visually appealing line that is pushed to the middle */
+      .fancy-line {
+        width: 400px;
+        height: 2px;
+        margin: 10px auto;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #4a6fa5,
+          transparent
+        );
+      }
+
+      .main-title {
+        text-align: center;
+      }
+
+      .subtitle {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 20px;
+      }
+
+      /* ---------- ARTICLE SECTION ---------- */
+      /* This part creates a box around my elements */
+      .article {
+        background-color: #e6edf7; /* light blue */
+        width: 85%;
+        margin: 20px auto;
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        line-height: 1.6;
+      }
+
+      .article h2 {
+        text-align: center;
+        color: #1f3a5f;
+      }
+
+      .article p {
+        margin-bottom: 15px;
+        text-align: justify;
+        color: #2e2e2e;
+      }
+
+      .article img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      /* ---------- TERRITORY FLEX ---------- */
+      /* 
+      This part creates a flexible layout for the territory section,
+        changing some elements to block and some to inline,
+        for the sake of my design */
+      .territory-flex {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin: 20px 0;
+      }
+
+      .territory-flex img {
+        max-width: 350px;
+        border-radius: 10px;
+      }
+
+      /* ---------- TWO COLUMN LAYOUT ---------- */
+
+      .two-column {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px;
+      }
+
+      /* ---------- ABOUT SECTION ---------- */
+
+      #about {
+        background-color: #e6edf7;
+        width: 40%;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ---------- TIMELINE ---------- */
+      /* 
+        Ai helped me with this timeline design, which is a vertical line with dots,
+        and content on the right. I modified the colors and spacing to fit my design
+      */
+      .timeline {
+        background-color: #e6edf7;
+        width: 40%;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-container {
+        position: relative;
+        margin-left: 10px;
+        padding-left: 15px;
+        border-left: 3px solid #2f5d9f; /* strong blue */
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .dot {
+        position: absolute;
+        left: -11px;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        background-color: #2f5d9f;
+        border-radius: 50%;
+      }
+
+      .content {
+        background-color: #f4f7fb; /* lighter layer */
+        padding: 10px 15px;
+        border-radius: 10px;
+        color: #2e2e2e;
+      }
     </style>
   </head>
+
   <body>
+    <!-- ---------- HEADER ---------- -->
     <header>
       <h1>Treaty 10 Project</h1>
 
       <nav class="centered-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="">Page 1</a></li>
-          <li><a href="">Page 2</a></li>
-          <li><a href="">Page 3</a></li>
-          <li><a href="">Page 4</a></li>
+          <li><a href="historical-context-and-background.html">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+          <li><a href="#">Page 4</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+
+    <!-- ---------- MAIN CONTENT ---------- -->
+    <main>
+      <!-- PAGE TITLE -->
+      <h1 class="main-title">Understanding Treaty 10</h1>
+      <div class="fancy-line"></div>
+
+      <i
+        ><p class="subtitle">
+          Study the promises, land and people involved in Treaty 10
+        </p></i
+      >
+
+      <!-- ARTICLE -->
+      <section class="article">
+        <h2>Historical Context of Treaty 10</h2>
+        <h3>Why was a treaty required in this time and place?</h3>
+
+        <p>
+          At this point in time a treaty was needed between the government of
+          Canada and certain groups of First Nation peoples in Saskatchewan and
+          a small area of Alberta. Previous treaties had been drawn up for
+          neighboring aboriginals and the government’s goal was to provide a
+          similar treaty to these aforementioned peoples. As trade and
+          settlement expanded west, conflict over the land began to arise. The
+          government of Canada wished to have a concise and legal document
+          indicating exactly what land could be settled and traded upon and what
+          land would remain as First Nations hunting grounds.
+        </p>
+
+        <img src="Images/Promises.jpg" alt="Promises of Treaty 10" />
+
+        <p>
+          Unlike earlier treaties, Treaty 10 covered areas that had not
+          previously been included in agreements.
+        </p>
+
+        <!-- TERRITORY FLEX -->
+        <div class="territory-flex">
+          <img src="Images/Territories.jpg" alt="Treaty 10 territories map" />
+
+          <ul>
+            <li>Covers Northern Saskatchewan and parts of Eastern Alberta.</li>
+            <li>Encompasses approximately 220,000 square kilometres.</li>
+            <li>
+              Includes regions that were previously outside of Treaty 8 and 6
+              boundaries.
+            </li>
+            <li>
+              Impacted major groups including the English River First Nation and
+              Hatchet Lake First Nation.
+            </li>
+          </ul>
+        </div>
+
+        <p>
+          The government sought to secure access to land and resources, while
+          Indigenous peoples aimed to protect their way of life and ensure their
+          rights were respected. Differences in understanding between written
+          agreements and oral promises played an important role in how the
+          treaty was interpreted. These differences continue to influence how
+          Treaty 10 is understood today.
+        </p>
+
+        <p>
+          The core provisions of treaty No. 10 differs for Natives and
+          half-Natives. Half-Natives received compensation according to an
+          already established fashion, which granted 240 acres of scrip that
+          could be redeemed for 240$. The core provisions for Natives are far
+          more detailed and regard land grants, systems for financial
+          assistance, and also special hunting, fishing and trapping exceptions.
+          The terms of the land grants are that each family of five, living
+          within the reserve, were granted one square mile of land. Natives who
+          choose to live outside the reserve system were granted 160 acres of
+          land. These Native lands, with the consent of the Natives, were
+          subject to the government’s selling or leasing for public purposes,
+          and would be compensated with land or money. The financial element of
+          the treaty included yearly payments of 5$ per person, 15$ per headman,
+          and 25$ per chief. Financial aids included the distribution of
+          clothing to each chief and headman every three years along with an
+          annual distribution of ammunition and twine. Also assistance was to be
+          directed towards agriculture and stock rising. There was also a
+          presentation of flags and medals and an initial gift of 12$ per
+          person, 22$ per headman, 32$ per chief. Special privileges were
+          granted to Natives who remained the right to hunt, fish and trap.
+          These rights were subject to government regulations and excluded land
+          used by the public. The final provision regarded education that was to
+          be provided, as the government deemed necessary.
+        </p>
+
+        <img
+          src="Images/Negotiating treaty.webp"
+          alt="Leaders negotiating Treaty 10" />
+      </section>
+
+      <!-- TWO COLUMN -->
+      <div class="two-column">
+        <!-- ABOUT -->
+        <section id="about">
+          <h2>Negotiation and Signing</h2>
+
+          <p>
+            Treaty 10 was signed between
+            <span class="highlight">1906 and 1907</span>
+            between the Canadian government and First Nations.
+          </p>
+
+          <ul>
+            <li>
+              Signing Period: Treaty 10 was negotiated and signed between 1906
+              and 1907 involving the Cree and Chipewyan First Nations in
+              northern Saskatchewan and parts of Alberta.
+            </li>
+            <li>
+              Treaty 10 was one of the last treaties signed in Saskatchewan and
+              addressed Indigenous land rights.
+            </li>
+            <li>
+              The treaty was signed while the Canadian government was expanding
+              control over western territories.
+            </li>
+          </ul>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="timeline">
+          <h2>Timeline</h2>
+
+          <div class="timeline-container">
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div class="content">
+                <h3>Before 1906</h3>
+                <p>No treaty in the region</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div class="content">
+                <h3>1906</h3>
+                <p>Negotiations begin</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div class="content">
+                <h3>1907</h3>
+                <p>Final signings completed</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ---------- FOOTER ---------- -->
     <footer class="footer">
       <p>&copy; 2026 David Leke-Atere. All rights reserved.</p>
 
       <p><strong>Sources:</strong></p>
-
       <p>
         The Canadian Encyclopedia<br />
         Government of Canada<br />
-        Canadian History Workshop<br />
-        Treaty 10
+        Canadian History Workshop
       </p>
     </footer>
   </body>
