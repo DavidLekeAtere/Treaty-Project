@@ -8,49 +8,64 @@ create a calm background, while darker blues improve readability and
 contrast. Neutral tones ensure the content remains easy to read and accessible.
 */
 
+/* Establish base accessible font scale on the root element */
+html {
+  font-size: 100%; /* Defaults to browser standard 16px */
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+
 body {
   background-color: #f4f7fb; /* light blue background */
   color: #2e2e2e; /* dark readable text */
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem; /* 16px / 16px = 1rem */
   line-height: 1.6;
   margin: 0;
 }
+
 p {
-  margin-bottom: 1em;
+  margin-bottom: 1rem; /* 16px margin using rem for layout consistency */
 }
+
 /* ---------- HEADER ---------- */
 
-Header {
+header {
+  /* Changed 'Header' to lowercase 'header' to match standard HTML tag selection */
   font-family: "Open Sans", "Merriweather", serif;
   background-color: #2f5d9f; /* strong blue */
   color: #ffffff;
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem; /* 20px / 16px = 1.25rem */
   font-weight: 700;
 }
 
 header h1 {
   margin: 0;
-  padding: 10px 0;
+  padding: 0.625rem 0; /* 10px / 16px = 0.625rem */
 }
+
 h1 {
   font-family: "Merriweather", serif;
-  font-size: 2.8rem;
-  margin-bottom: 0.5em;
+  font-size: 2.8rem; /* Kept rem value as specified */
+  margin-bottom: 0.5rem; /* converted em to rem for baseline alignment */
   font-weight: 700;
+  line-height: 24px;
 }
+
 h2 {
   font-family: "Merriweather", serif;
-  font-size: 2rem;
-  margin-bottom: 1.5em;
+  font-size: 2rem; /* Kept rem value as specified */
+  margin-bottom: 1.5rem; /* converted em to rem for baseline alignment */
   font-weight: 700;
 }
+
 h3 {
   font-family: "Merriweather", serif;
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* Kept rem value as specified */
   font-weight: 700;
 }
+
 /* ---------- NAVIGATION ---------- */
 
 .centered-nav {
@@ -60,30 +75,31 @@ h3 {
 .centered-nav ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 0.625rem 0 0 0; /* 10px / 16px = 0.625rem */
 }
 
 .centered-nav li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 0.625rem; /* 10px / 16px = 0.625rem */
 }
 
 .centered-nav li a {
   color: #ffffff; /* readable on blue */
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 5px;
+  padding: 0.375rem 0.75rem; /* 6px / 16px = 0.375rem; 12px / 16px = 0.75rem */
+  border-radius: 5px; /* Kept pixel border-radius for geometric pixel-perfect sharpness */
   transition: background-color 0.3s ease;
 }
 
 .centered-nav li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 nav {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
+  font-size: 0.95rem; /* Kept rem value as specified */
+  letter-spacing: 0.03125rem; /* 0.5px / 16px = 0.03125rem */
 }
 
 /* ---------- LINKS ---------- */
@@ -103,5 +119,5 @@ footer {
   background-color: #1f3a5f; /* darker blue for contrast */
   color: #ffffff;
   text-align: center;
-  padding: 15px;
+  padding: 0.9375rem; /* 15px / 16px = 0.9375rem */
 }

@@ -1,0 +1,252 @@
+<!--
+  Name: David Leke-Atere
+  Course: Web Development II
+  Teacher: Scott Hardman
+  School: Pembina Trails Collegiate
+  Date Last Modified: 2026-05-15
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Day</title>
+    <link rel="stylesheet" href="Stylesheets/styles.css" />
+    <style>
+      .fancy-line {
+        width: 400px;
+        height: 2px;
+        margin: 10px auto;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #4a6fa5,
+          transparent
+        );
+      }
+      .intro {
+        background-color: #e6edf7; /* light blue */
+        width: 85%;
+        margin: 20px auto;
+        padding: 25px 30px;
+        border-radius: 15px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        line-height: 1.6;
+      }
+      .Same-Line {
+        display: flex;
+        align-items: center; /* Vertically centers the text with the image */
+        gap: 10px; /* Adds space between the image and text */
+      }
+      /* Prevents table from clipping or breaking on mobile screens */
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        margin: 24px 0;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+      }
+
+      /* Core table structure */
+      .treaty-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        background-color: #ffffff;
+        min-width: 600px; /* Ensures text stays legible when scrolled on mobile */
+      }
+
+      /* Table Header styling */
+      .treaty-table th {
+        background-color: #1e3a8a; /* Professional corporate deep blue */
+        color: #ffffff;
+        font-weight: 600;
+        text-align: left;
+        padding: 14px 18px;
+        letter-spacing: 0.5px;
+      }
+
+      /* Table Cells styling */
+      .treaty-table td {
+        padding: 14px 18px;
+        color: #334155; /* Dark grey text for optimal contrast and readability */
+        vertical-align: top;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      /* Bold accent for the first column */
+      .treaty-table td.row-title {
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      /* Zebra striping (alternating row background colors) */
+      .treaty-table tbody tr:nth-of-type(even) {
+        background-color: #f8fafc; /* Ultra-light grey tint */
+      }
+
+      /* Interactive hover highlight */
+      .treaty-table tbody tr:hover {
+        background-color: #f1f5f9;
+        transition: background-color 0.15s ease-in-out;
+      }
+      .site-wrapper {
+        min-height: 100vh;
+        /* Smoothly animate all property changes over 0.5 seconds */
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Triggered when hovering anywhere within the site-wrapper */
+      .site-wrapper:hover {
+        transform: scale(0.98); /* Slight shrink effect */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Treaty 10 Project</h1>
+      <nav class="centered-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="historical-context-and-background.html">History</a></li>
+          <li><a href="Modern-Day.html">Modern Day</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="site-wrapper">
+      <main>
+        <h1 style="text-align: center">Modern Day Context of Treaty 10</h1>
+        <div class="fancy-line"></div>
+        <i
+          ><p class="subtitle" style="text-align: center">
+            Study how treaty 10 affects the modern land and people involved in
+            Treaty 10
+          </p></i
+        >
+        <section class="intro">
+          <p>
+            The modern context of Treaty 10 is shaped by ongoing discussions
+            about land rights, resource management, and the relationship between
+            Indigenous peoples and the Canadian government. As society evolves,
+            so too does the interpretation and implementation of treaties.
+          </p>
+          <br />
+          <br />
+          <div class="Same-Line">
+            <img
+              src="Images/Treaty 10 Modern day.jpg"
+              alt="Protest for Indigenous rights"
+              style="
+                border-radius: 20px;
+                width: 500px;
+                height: 300px;
+                object-fit: cover;
+              " />
+            <p style="margin-bottom: 115px; margin-left: 50px">
+              Creating Urban Reserves via Treaty Land Entitlements Under the
+              original treaty, the federal government miscalculated population
+              sizes, resulting in First Nations receiving much less reserve land
+              than they were legally owed. For decades, leaders campaigned to
+              correct these discrepancies.Through the Treaty Land Entitlement
+              (TLE) Framework Agreement, Treaty 10 nations like English River
+              fought for and won the right to buy land on the open market to
+              expand their borders. Instead of accepting remote northern plots,
+              they strategically bought land near major economic hubs. They
+              established a highly successful urban reserve south of Saskatoon,
+              using their treaty status to build commercial businesses, generate
+              independent revenue, and create jobs for their members.
+            </p>
+          </div>
+          <br />
+          <p>
+            Here are some cases that helped usher improvements in first nations
+            communities.
+          </p>
+          <div class="table-container">
+            <table class="treaty-table">
+              <thead>
+                <tr>
+                  <th>Case / Action</th>
+                  <th>First Nation Involved</th>
+                  <th>What They Stood Up For</th>
+                  <th>Modern Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="row-title">Oil Sands Legal Battle</td>
+                  <td>Buffalo River Dene Nation</td>
+                  <td>
+                    Opposed provincial bitumen exploration permits issued
+                    without consultation on traditional hunting and trapping
+                    grounds.
+                  </td>
+                  <td>
+                    Established a strict legal precedent forcing the government
+                    to consult before surface drilling can occur.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="row-title">"Cows & Ploughs" Claim</td>
+                  <td>English River First Nation</td>
+                  <td>
+                    Held the federal government accountable for breaking a 1906
+                    promise to provide livestock and farming supplies.
+                  </td>
+                  <td>
+                    Secured a major financial settlement from the federal
+                    government in 2024 for the historical breach.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="row-title">Urban Reserve Creation</td>
+                  <td>English River First Nation</td>
+                  <td>
+                    Leveraged Treaty Land Entitlement (TLE) funds to claim land
+                    owed due to historical population miscalculations.
+                  </td>
+                  <td>
+                    Created a highly successful commercial urban reserve south
+                    of Saskatoon to generate independent revenue.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="row-title">Treaty Ten Gatherings</td>
+                  <td>All Treaty 10 Member Nations</td>
+                  <td>
+                    United geographically isolated communities to protect oral
+                    histories and align political strategies against government
+                    overreach.
+                  </td>
+                  <td>
+                    Created a unified regional front that reinforces treaty
+                    rights through cultural preservation and collective
+                    political bargaining.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2026 David Leke-Atere. All rights reserved.</p>
+      <p><strong>Sources:</strong></p>
+      <p>
+        The Canadian Encyclopedia<br />
+        Government of Canada<br />
+        Canadian History Workshop<br />
+        Treaty 10
+      </p>
+    </footer>
+  </body>
+</html>
