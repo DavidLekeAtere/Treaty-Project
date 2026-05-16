@@ -11,12 +11,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Day</title>
+
+    <!-- External stylesheet for shared site-wide styles (colours, fonts, nav, header, footer) -->
     <link rel="stylesheet" href="Stylesheets/styles.css" />
+
     <style>
+      /* 
+          DECORATIVE DIVIDER LINE
+          Fades in from transparent on both sides to
+          create a subtle visual break under headings
+        */
       .fancy-line {
         width: 400px;
         height: 2px;
         margin: 10px auto;
+
+        /* Vendor-prefixed gradients for cross-browser support */
+        background: -webkit-linear-gradient(
+          left,
+          transparent,
+          #4a6fa5,
+          transparent
+        );
+        background: -moz-linear-gradient(
+          left,
+          transparent,
+          #4a6fa5,
+          transparent
+        );
+        background: -o-linear-gradient(left, transparent, #4a6fa5, transparent);
         background: linear-gradient(
           to right,
           transparent,
@@ -24,30 +47,106 @@
           transparent
         );
       }
+
+      /* 
+          INTRO / CONTENT SECTION CARD
+          Shared card style used for the introduction
+          paragraph block and the "differences" section
+       */
       .intro {
-        background-color: #e6edf7; /* light blue */
+        background-color: #e6edf7; /* Light blue — consistent with site colour scheme */
         width: 85%;
         margin: 20px auto;
         padding: 25px 30px;
         border-radius: 15px;
+
+        /* Vendor prefixes for box-shadow (older browser support) */
+        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        line-height: 1.6;
+
+        line-height: 1.6; /* Improves readability of body text */
       }
+
+      /* 
+          SAME-LINE LAYOUT
+          Displays an image and a paragraph side by
+          side using flexbox, vertically centred
+       */
       .Same-Line {
+        display: -webkit-flex; /* Safari/older WebKit support */
+        display: -ms-flexbox; /* IE 10 support */
         display: flex;
-        align-items: center; /* Vertically centers the text with the image */
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; /* Vertically centres the text with the image */
+
         gap: 10px; /* Adds space between the image and text */
       }
-      /* Prevents table from clipping or breaking on mobile screens */
+
+      /*
+          IMAGE INSIDE SAME-LINE LAYOUT
+          Moved here from inline style on the <img> tag
+       */
+      .Same-Line img {
+        border-radius: 20px;
+        width: 500px;
+        height: 300px;
+        -o-object-fit: cover; /* Opera support */
+        object-fit: cover;
+      }
+
+      /* 
+          TEXT INSIDE SAME-LINE LAYOUT
+          Adds left spacing and bottom margin so the
+          paragraph aligns visually with the image
+       */
+      .Same-Line p {
+        margin-bottom: 115px;
+        margin-left: 50px;
+      }
+
+      /* 
+          PAGE SUBTITLE
+          Italic, centred subtitle below the main heading
+      */
+      .subtitle {
+        text-align: center;
+      }
+
+      /* 
+          MAIN PAGE HEADING (inside <main>)
+          Centred to distinguish it from the site title
+          in the <header>
+      */
+      .main-heading {
+        text-align: center;
+      }
+
+      /* 
+          TABLE CONTAINER
+          Prevents the table from clipping or breaking
+          on smaller/mobile screens by enabling
+          horizontal scrolling
+      */
       .table-container {
         width: 100%;
         overflow-x: auto;
         margin: 24px 0;
+
+        -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
         border-radius: 6px;
       }
 
-      /* Core table structure */
+      /*
+          TREATY TABLE — CORE STRUCTURE
+          Full-width, collapsed-border table with a
+          system font stack for legibility
+       */
       .treaty-table {
         width: 100%;
         border-collapse: collapse;
@@ -60,57 +159,160 @@
         min-width: 600px; /* Ensures text stays legible when scrolled on mobile */
       }
 
-      /* Table Header styling */
+      /* 
+          TABLE HEADER ROW
+          Deep blue background with white text for
+          strong contrast (meets 7:1 ratio requirement)
+       */
       .treaty-table th {
         background-color: #1e3a8a; /* Professional corporate deep blue */
         color: #ffffff;
         font-weight: 600;
         text-align: left;
         padding: 14px 18px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.5px; /* Slight spacing improves header readability */
       }
 
-      /* Table Cells styling */
+      /* 
+          TABLE DATA CELLS
+          Dark grey text for contrast on white/light
+          backgrounds; top-aligned for multi-line rows
+      */ 
       .treaty-table td {
         padding: 14px 18px;
-        color: #334155; /* Dark grey text for optimal contrast and readability */
+        color: #334155; /* Dark grey — high contrast on white background */
         vertical-align: top;
         border-bottom: 1px solid #e2e8f0;
       }
 
-      /* Bold accent for the first column */
+      /* Bold accent for the first column (case/action name) */
       .treaty-table td.row-title {
         font-weight: 600;
-        color: #0f172a;
+        color: #0f172a; /* Near-black for maximum contrast on the row-title column */
       }
 
-      /* Zebra striping (alternating row background colors) */
+      /* 
+          ZEBRA STRIPING
+          Alternating row background colours to improve
+          readability across wide table rows
+       */
       .treaty-table tbody tr:nth-of-type(even) {
         background-color: #f8fafc; /* Ultra-light grey tint */
       }
 
-      /* Interactive hover highlight */
+      /* 
+          TABLE ROW HOVER
+          Subtle highlight on hover to help users track
+          which row they are reading
+       */
       .treaty-table tbody tr:hover {
         background-color: #f1f5f9;
+
+        /* Vendor-prefixed transition for cross-browser support */
+        -webkit-transition: background-color 0.15s ease-in-out;
+        -moz-transition: background-color 0.15s ease-in-out;
+        -o-transition: background-color 0.15s ease-in-out;
         transition: background-color 0.15s ease-in-out;
       }
+
+      /* 
+          SITE WRAPPER
+          Centers all page content vertically and
+          horizontally; animates layout changes smoothly
+      */
       .site-wrapper {
         min-height: 100vh;
-        /* Smoothly animate all property changes over 0.5 seconds */
-        transition: all 0.5s ease-in-out;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
+
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+
+        /* Smoothly animate all property changes over 0.5 seconds */
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
       }
 
-      /* Triggered when hovering anywhere within the site-wrapper */
+      /* Slight shrink effect when hovering anywhere within the site-wrapper */
       .site-wrapper:hover {
-        transform: scale(0.98); /* Slight shrink effect */
+        -webkit-transform: scale(0.98);
+        -moz-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        -o-transform: scale(0.98);
+        transform: scale(0.98);
+      }
+
+      /*
+          TREATY 10 DIFFERENCES SECTION
+          Reuses the same card style as .intro but
+          with extra top margin to clear the fixed header
+       */
+      #treaty10-differences {
+        background-color: #e6edf7; /* Light blue — consistent with .intro card */
+        width: 85%;
+        margin: 20px auto;
+        padding: 25px 30px;
+        border-radius: 15px;
+
+        -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+        line-height: 1.6;
+        margin-top: 120px; /* Clears the fixed navigation header */
+      }
+      /* =============================================
+    FADE-IN ANIMATION
+    Animates the main content fading in on load.
+    Uses @keyframes — researched animation not
+    covered in class.
+============================================= */
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      main {
+        -webkit-animation: fadeIn 1s ease-in;
+        animation: fadeIn 1s ease-in;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
     </style>
   </head>
   <body>
+    <!-- 
+        SITE HEADER
+        Contains the site title and main navigation links.
+        Navigation is consistent across all three pages.
+    -->
     <header>
       <h1>Treaty 10 Project</h1>
       <nav class="centered-nav">
@@ -121,41 +323,56 @@
         </ul>
       </nav>
     </header>
+
+    <!-- 
+        SITE WRAPPER
+        Wraps all page content below the header.
+        Applies the scale hover transition to the entire page body.
+      -->
     <div class="site-wrapper">
       <main>
-        <h1 style="text-align: center">Modern Day Context of Treaty 10</h1>
+        <!-- Page heading — h2 used here because h1 is already used in the header -->
+        <h2 class="main-heading">Modern Day Context of Treaty 10</h2>
+
+        <!-- Decorative gradient divider line below the heading -->
         <div class="fancy-line"></div>
-        <i
-          ><p class="subtitle" style="text-align: center">
+
+        <!-- Subtitle describing the page's purpose -->
+        <i>
+          <p class="subtitle">
             Study how treaty 10 affects the modern land and people involved in
             Treaty 10
-          </p></i
-        >
+          </p>
+        </i>
+
+        <!-- 
+            INTRO SECTION
+            Overview paragraph and image, followed by a summary
+            table of key modern legal cases and actions
+        -->
         <section class="intro">
+          <!-- Introductory paragraph about the modern context of Treaty 10 -->
           <p>
             The modern context of Treaty 10 is shaped by ongoing discussions
             about land rights, resource management, and the relationship between
             Indigenous peoples and the Canadian government. As society evolves,
             so too does the interpretation and implementation of treaties.
           </p>
+
           <br />
           <br />
+
+          <!-- Image and text displayed side by side using the Same-Line flex layout -->
           <div class="Same-Line">
             <img
               src="Images/Treaty 10 Modern day.jpg"
-              alt="Protest for Indigenous rights"
-              style="
-                border-radius: 20px;
-                width: 500px;
-                height: 300px;
-                object-fit: cover;
-              " />
-            <p style="margin-bottom: 115px; margin-left: 50px">
+              alt="Protest for Indigenous rights" />
+            <p>
               Creating Urban Reserves via Treaty Land Entitlements Under the
               original treaty, the federal government miscalculated population
               sizes, resulting in First Nations receiving much less reserve land
               than they were legally owed. For decades, leaders campaigned to
-              correct these discrepancies.Through the Treaty Land Entitlement
+              correct these discrepancies. Through the Treaty Land Entitlement
               (TLE) Framework Agreement, Treaty 10 nations like English River
               fought for and won the right to buy land on the open market to
               expand their borders. Instead of accepting remote northern plots,
@@ -165,11 +382,20 @@
               independent revenue, and create jobs for their members.
             </p>
           </div>
+
           <br />
+
+          <!-- Lead-in sentence for the summary table below -->
           <p>
             Here are some cases that helped usher improvements in first nations
             communities.
           </p>
+
+          <!-- --------------------------------------------------------
+              SUMMARY TABLE
+              Outlines key legal cases and actions taken by Treaty 10
+              First Nations and their modern outcomes
+          -------------------------------------------------------- -->
           <div class="table-container">
             <table class="treaty-table">
               <thead>
@@ -181,6 +407,7 @@
                 </tr>
               </thead>
               <tbody>
+                <!-- Row 1: Oil Sands Legal Battle -->
                 <tr>
                   <td class="row-title">Oil Sands Legal Battle</td>
                   <td>Buffalo River Dene Nation</td>
@@ -194,8 +421,10 @@
                     to consult before surface drilling can occur.
                   </td>
                 </tr>
+
+                <!-- Row 2: Cows and Ploughs Claim -->
                 <tr>
-                  <td class="row-title">"Cows & Ploughs" Claim</td>
+                  <td class="row-title">"Cows &amp; Ploughs" Claim</td>
                   <td>English River First Nation</td>
                   <td>
                     Held the federal government accountable for breaking a 1906
@@ -206,6 +435,8 @@
                     government in 2024 for the historical breach.
                   </td>
                 </tr>
+
+                <!-- Row 3: Urban Reserve Creation -->
                 <tr>
                   <td class="row-title">Urban Reserve Creation</td>
                   <td>English River First Nation</td>
@@ -218,6 +449,8 @@
                     of Saskatoon to generate independent revenue.
                   </td>
                 </tr>
+
+                <!-- Row 4: Treaty Ten Gatherings -->
                 <tr>
                   <td class="row-title">Treaty Ten Gatherings</td>
                   <td>All Treaty 10 Member Nations</td>
@@ -235,9 +468,101 @@
               </tbody>
             </table>
           </div>
+          <!-- End of summary table -->
         </section>
+        <!-- End of intro section -->
+
+        <!-- 
+          TREATY 10 DIFFERENCES SECTION
+          Highlights five key ways Treaty 10 differs from other
+          numbered treaties in Canada
+        -->
+        <section id="treaty10-differences">
+          <h2>What Makes Treaty 10 Different?</h2>
+
+          <!-- Difference 1: Lands in Severalty -->
+          <div>
+            <h3>1. Lands in Severalty</h3>
+            <p>
+              Treaty 10 allowed individual Indigenous families to claim 160
+              acres of private land outside a shared reserve. This was different
+              from earlier treaties that grouped entire communities onto one
+              reserve.
+            </p>
+            <p>
+              This system was created because many northern Cree and Chipewyan
+              peoples lived in small, mobile hunting groups spread across large
+              areas rather than in permanent villages.
+            </p>
+          </div>
+
+          <!-- Difference 2: Created Because of New Provinces -->
+          <div>
+            <h3>2. Created Because of New Provinces</h3>
+            <p>
+              Earlier numbered treaties were mainly made to open land for
+              farming settlers and railway construction.
+            </p>
+            <p>
+              Treaty 10 was delayed for many years, even after Indigenous
+              communities requested help during times of starvation. It was
+              finally rushed through in 1906 after Saskatchewan and Alberta
+              became provinces in 1905, which pushed the government to take
+              control of northern lands.
+            </p>
+          </div>
+
+          <!-- Difference 3: Focus on Natural Resources -->
+          <div>
+            <h3>3. Focus on Natural Resources</h3>
+            <p>
+              Unlike southern treaty areas that were suited for farming, the
+              northern lands in Treaty 10 were not ideal for agriculture.
+            </p>
+            <p>
+              The Canadian government wanted access to valuable resources such
+              as timber and minerals found in the north.
+            </p>
+          </div>
+
+          <!-- Difference 4: Unusual Boundaries -->
+          <div>
+            <h3>4. Unusual Boundaries</h3>
+            <p>
+              Treaty 10 covered about 220,000 square kilometres across northern
+              Saskatchewan and a small part of eastern Alberta.
+            </p>
+            <p>
+              Even though part of Alberta was included, no Alberta First Nations
+              signed the treaty. Instead, two First Nations from Manitoba signed
+              it even though their communities were outside the official treaty
+              area.
+            </p>
+          </div>
+
+          <!-- Difference 5: Métis Scrip at the Same Time -->
+          <div>
+            <h3>5. Métis Scrip Happened at the Same Time</h3>
+            <p>
+              During the Treaty 10 negotiations, the government also sent a
+              Scrip Commissioner to deal with Métis land claims.
+            </p>
+            <p>
+              Métis people were offered scrip that could be exchanged for either
+              240 acres of land or $240 in cash.
+            </p>
+          </div>
+        </section>
+        <!-- End of treaty10-differences section -->
       </main>
     </div>
+    <!-- End of site-wrapper -->
+
+    <!-- 
+      FOOTER
+      Displays copyright information and content sources.
+      Consistent across all three pages.
+    -->
     <footer>
       <p>&copy; 2026 David Leke-Atere. All rights reserved.</p>
       <p><strong>Sources:</strong></p>
